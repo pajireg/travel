@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>보홀 4박 6일 여행 계획</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+      body {
+          font-family: 'Inter', 'Noto Sans KR', sans-serif;
+          background-color: #FEFBF6;
+      }
+      .timeline-item::before {
+          content: '';
+          position: absolute;
+          left: 19px;
+          top: 0;
+          bottom: 0;
+          width: 2px;
+          background-color: #00B4D8;
+      }
+      .timeline-item:first-child::before {
+          top: 20px;
+      }
+      .timeline-item:last-child::before {
+          bottom: calc(100% - 20px);
+      }
+      .nav-link.active {
+          color: #00B4D8;
+          font-weight: 600;
+      }
+  </style>
+</head>
+<body class="text-gray-800">
+
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <nav id="navbar" class="container mx-auto px-6 py-3 flex justify-around items-center">
+    <a href="#day1" class="nav-link text-gray-600 hover:text-[#00B4D8] transition duration-300 text-sm sm:text-base">1일차</a>
+    <a href="#day2" class="nav-link text-gray-600 hover:text-[#00B4D8] transition duration-300 text-sm sm:text-base">2일차</a>
+    <a href="#day3" class="nav-link text-gray-600 hover:text-[#00B4D8] transition duration-300 text-sm sm:text-base">3일차</a>
+    <a href="#day4" class="nav-link text-gray-600 hover:text-[#00B4D8] transition duration-300 text-sm sm:text-base">4일차</a>
+    <a href="#day5" class="nav-link text-gray-600 hover:text-[#00B4D8] transition duration-300 text-sm sm:text-base">5-6일차</a>
+    <a href="#summary" class="nav-link text-gray-600 hover:text-[#00B4D8] transition duration-300 text-sm sm:text-base">요약</a>
+  </nav>
+</header>
+
+<main class="container mx-auto p-4 md:p-8">
+
+  <section id="hero" class="text-center my-8 md:my-12">
+    <h1 class="text-4xl md:text-5xl font-bold text-[#0077B6]">보홀 여행</h1>
+    <p class="text-lg md:text-xl text-gray-600 mt-2">4박 6일간의 힐링 & 어드벤처 플랜</p>
+    <p class="text-md text-gray-500 mt-1">2025년 9월 30일 ~ 10월 5일</p>
+  </section>
+
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="lg:col-span-2">
+
+      <section id="day1" class="scroll-mt-20 mb-8 bg-white p-6 rounded-2xl shadow-lg">
+        <h2 class="text-3xl font-bold mb-6 border-b-2 border-[#00B4D8] pb-2 text-[#0077B6]">Day 1: 보홀 도착 & 여유로운 시작 (10/1 수)</h2>
+        <div class="relative pl-2">
+          <div class="timeline-item relative pb-8">
+            <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-[#00B4D8] text-white flex items-center justify-center">
+              <i class="fa-solid fa-plane-arrival"></i>
+            </div>
+            <div class="ml-12">
+              <p class="font-bold text-lg">오전 1:00 - 3:00</p>
+              <h3 class="font-semibold text-xl mb-2">보홀 팡라오 공항 도착 및 숙소 이동</h3>
+              <p class="text-gray-600">입국 심사 후 미리 예약한 픽업 차량으로 알로나 비치 근처 숙소로 이동합니다. 늦은 시간이니 안전하게 예약된 차량을 이용하는 것을 추천해요.</p>
+            </div>
+          </div>
+          <div class="timeline-item relative pb-8">
+            <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-[#90E0EF] text-white flex items-center justify-center">
+              <i class="fa-solid fa-bed"></i>
+            </div>
+            <div class="ml-12">
+              <p class="font-bold text-lg">오전 3:00 - 오후 12:00</p>
+              <h3 class="font-semibold text-xl mb-2">숙소 체크인 및 충분한 휴식</h3>
+              <p class="text-gray-600">밤샘 비행의 피로를 풀기 위해 체크인 후 바로 푹 잠을 잡니다. 첫날은 무리하지 않는 것이 중요해요.</p>
+            </div>
+          </div>
+          <div class="timeline-item relative pb-8">
+            <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-[#CAF0F8] text-[#0077B6] flex items-center justify-center">
+              <i class="fa-solid fa-utensils"></i>
+            </div>
+            <div class="ml-12">
+              <p class="font-bold text-lg">오후 12:00 -</p>
+              <h3 class="font-semibold text-xl mb-2">알로나 비치 적응하기</h3>
+              <p class="text-gray-600">느긋하게 일어나 브런치를 즐기고, 해변을 산책하며 보홀의 첫인상을 느껴보세요. 환전, 유심 구매, 투어 예약 등을 하며 오후 시간을 보냅니다.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="day2" class="scroll-mt-20 mb-8 bg-white p-6 rounded-2xl shadow-lg">
+        <h2 class="text-3xl font-bold mb-6 border-b-2 border-[#70C1B3] pb-2 text-[#2A9D8F]">Day 2: 보홀 육상 핵심 투어 (10/2 목)</h2>
+        <div class="relative pl-2">
+          <div class="timeline-item relative pb-8">
+            <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-[#70C1B3] text-white flex items-center justify-center">
+              <i class="fa-solid fa-car"></i>
+            </div>
+            <div class="ml-12">
+              <p class="font-bold text-lg">오전 9:00 - 오후 5:00</p>
+              <h3 class="font-semibold text-xl mb-2">프라이빗 차량 투어</h3>
+              <p class="text-gray-600">하루 동안 차량을 대절해 보홀의 상징적인 명소들을 편안하게 둘러보는 날입니다.</p>
+              <ul class="list-disc list-inside mt-3 space-y-2 text-gray-700">
+                <li><span class="font-semibold">초콜릿 힐:</span> 신비로운 자연 경관 감상하기</li>
+                <li><span class="font-semibold">타르시어 원숭이:</span> 세상에서 가장 작은 영장류 만나기</li>
+                <li><span class="font-semibold">로복강 선상 뷔페:</span> 강 위에서 즐기는 특별한 점심 식사</li>
+                <li><span class="font-semibold">맨메이드 포레스트:</span> 울창한 숲길에서 인생 사진 남기기</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item relative pb-8">
+            <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-[#B2DBBF] text-white flex items-center justify-center">
+              <i class="fa-solid fa-martini-glass"></i>
+            </div>
+            <div class="ml-12">
+              <p class="font-bold text-lg">저녁</p>
+              <h3 class="font-semibold text-xl mb-2">자유 시간 및 저녁 식사</h3>
+              <p class="text-gray-600">투어 후 숙소에서 휴식을 취한 뒤, 알로나 비치의 다양한 맛집 중 한 곳을 골라 맛있는 저녁을 즐깁니다.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="day3" class="scroll-mt-20 mb-8 bg-white p-6 rounded-2xl shadow-lg">
+        <h2 class="text-3xl font-bold mb-6 border-b-2 border-[#F25F5C] pb-2 text-[#E53935]">Day 3: 발리카삭 거북이 투어 (10/3 금)</h2>
+        <div class="relative pl-2">
+          <div class="timeline-item relative pb-8">
+            <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-[#F25F5C] text-white flex items-center justify-center">
+              <i class="fa-solid fa-ship"></i>
+            </div>
+            <div class="ml-12">
+              <p class="font-bold text-lg">오전</p>
+              <h3 class="font-semibold text-xl mb-2">발리카삭 해상 투어</h3>
+              <p class="text-gray-600">오전에는 프라이빗 보트를 타고 스노클링의 성지, 발리카삭 섬으로 떠납니다. 바다거북과 함께 수영하고 아름다운 산호와 열대어를 감상하는 잊지 못할 시간을 보내세요.</p>
+            </div>
+          </div>
+          <div class="timeline-item relative pb-8">
+            <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-[#FFE082] text-[#C68800] flex items-center justify-center">
+              <i class="fa-solid fa-umbrella-beach"></i>
+            </div>
+            <div class="ml-12">
+              <p class="font-bold text-lg">오후</p>
+              <h3 class="font-semibold text-xl mb-2">자유시간 및 휴식</h3>
+              <p class="text-gray-600">투어 후 숙소로 돌아와 휴식을 취하거나, 리조트 수영장에서 여유로운 오후를 즐깁니다. 전날 투어의 피로도 풀고 다음 날을 위해 재충전하는 시간입니다.</p>
+            </div>
+          </div>
+          <div class="timeline-item relative pb-8">
+            <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-[#4DB6AC] text-white flex items-center justify-center">
+              <i class="fa-solid fa-moon"></i>
+            </div>
+            <div class="ml-12">
+              <p class="font-bold text-lg">저녁</p>
+              <h3 class="font-semibold text-xl mb-2">낭만적인 저녁 식사</h3>
+              <p class="text-gray-600">알로나 비치의 멋진 레스토랑에서 저녁을 먹으며 다음 날 나팔링 투어에 대한 기대감을 나눠보세요.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="day4" class="scroll-mt-20 mb-8 bg-white p-6 rounded-2xl shadow-lg">
+        <h2 class="text-3xl font-bold mb-6 border-b-2 border-[#0077B6] pb-2 text-[#005A8D]">Day 4: 나팔링 정어리떼 & 한국으로 (10/4 토)</h2>
+        <div class="relative pl-2">
+          <div class="timeline-item relative pb-8">
+            <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-[#CAF0F8] text-[#0077B6] flex items-center justify-center">
+              <i class="fa-solid fa-suitcase-rolling"></i>
+            </div>
+            <div class="ml-12">
+              <p class="font-bold text-lg">이른 오전</p>
+              <h3 class="font-semibold text-xl mb-2">체크아웃 및 짐 보관</h3>
+              <p class="text-gray-600">나팔링 투어를 떠나기 전, 호텔에서 미리 체크아웃하고 모든 짐을 프런트에 안전하게 맡깁니다.</p>
+            </div>
+          </div>
+          <div class="timeline-item relative pb-8">
+            <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-[#00B4D8] text-white flex items-center justify-center">
+              <i class="fa-solid fa-fish-fins"></i>
+            </div>
+            <div class="ml-12">
+              <p class="font-bold text-lg">오전</p>
+              <h3 class="font-semibold text-xl mb-2">나팔링 리프 정어리떼 투어</h3>
+              <p class="text-gray-600">여행의 하이라이트! 아내분이 그토록 원하셨던 정어리떼의 황홀한 군무를 직접 경험합니다. 인생 최고의 스노클링을 즐겨보세요!</p>
+            </div>
+          </div>
+          <div class="timeline-item relative pb-8">
+            <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-[#90E0EF] text-white flex items-center justify-center">
+              <i class="fa-solid fa-shower"></i>
+            </div>
+            <div class="ml-12">
+              <h3 class="font-semibold text-xl mb-2">투어 후 재정비 & 샤워 솔루션! 🚿</h3>
+              <div class="mt-2 bg-yellow-100 border-l-4 border-yellow-400 p-4 text-yellow-800">
+                <p class="font-bold mb-2">가장 중요한 시간! 이렇게 해결하세요.</p>
+                <ul class="list-decimal list-inside space-y-1">
+                  <li><span class="font-semibold">마사지샵 이용:</span> 저녁 식사 전 마사지를 예약하고 샤워실을 이용하는 것이 가장 완벽한 방법입니다. 피로도 풀고 개운하게 공항에 갈 수 있어요.</li>
+                  <li><span class="font-semibold">리조트 데이유즈:</span> 일부 리조트에서 유료로 샤워시설 등 부대시설 이용권을 판매합니다.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item relative pb-8">
+            <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-[#48CAE4] text-white flex items-center justify-center">
+              <i class="fa-solid fa-spa"></i>
+            </div>
+            <div class="ml-12">
+              <p class="font-bold text-lg">밤 9:00</p>
+              <h3 class="font-semibold text-xl mb-2">마지막 만찬 & 마사지</h3>
+              <p class="text-gray-600">마사지샵에서 샤워 후 개운하게 마지막 저녁 식사를 즐기고, 비행 전 여행의 피로를 푸는 마사지를 받습니다.</p>
+            </div>
+          </div>
+          <div class="timeline-item relative">
+            <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-[#03045E] text-white flex items-center justify-center">
+              <i class="fa-solid fa-plane-departure"></i>
+            </div>
+            <div class="ml-12">
+              <p class="font-bold text-lg">밤 10:30</p>
+              <h3 class="font-semibold text-xl mb-2">공항으로 이동</h3>
+              <p class="text-gray-600">호텔에서 짐을 찾은 후, 미리 예약한 차량이나 택시를 이용해 공항으로 이동합니다.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="day5" class="scroll-mt-20 bg-white p-6 rounded-2xl shadow-lg">
+        <h2 class="text-3xl font-bold mb-6 border-b-2 border-[#03045E] pb-2 text-[#023E8A]">Day 5-6: 한국으로 (10/5 일)</h2>
+        <div class="relative pl-2">
+          <div class="timeline-item relative pb-8">
+            <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-[#0077B6] text-white flex items-center justify-center">
+              <i class="fa-solid fa-plane"></i>
+            </div>
+            <div class="ml-12">
+              <p class="font-bold text-lg">오전 1:30</p>
+              <h3 class="font-semibold text-xl mb-2">보홀 출발</h3>
+              <p class="text-gray-600">아름다운 추억을 가득 안고 한국으로 돌아가는 비행기에 탑승합니다.</p>
+            </div>
+          </div>
+          <div class="timeline-item relative">
+            <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-[#023E8A] text-white flex items-center justify-center">
+              <i class="fa-solid fa-house"></i>
+            </div>
+            <div class="ml-12">
+              <p class="font-bold text-lg">오전 7:00 경</p>
+              <h3 class="font-semibold text-xl mb-2">인천 국제공항 도착</h3>
+              <p class="text-gray-600">즐거웠던 여행을 마무리하고 일상으로 복귀합니다.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <aside class="lg:col-span-1 space-y-8 sticky top-24 self-start">
+      <div id="summary" class="scroll-mt-20 bg-white p-6 rounded-2xl shadow-lg">
+        <h3 class="text-2xl font-bold mb-4 text-[#0077B6]">여행 요약</h3>
+        <div class="space-y-3 text-gray-700">
+          <div class="flex items-center">
+            <i class="fa-solid fa-map-marker-alt w-6 text-[#00B4D8]"></i>
+            <span><strong>목적지:</strong> 필리핀 보홀</span>
+          </div>
+          <div class="flex items-center">
+            <i class="fa-solid fa-calendar-days w-6 text-[#00B4D8]"></i>
+            <span><strong>기간:</strong> 4박 6일</span>
+          </div>
+          <div class="flex items-center">
+            <i class="fa-solid fa-users w-6 text-[#00B4D8]"></i>
+            <span><strong>컨셉:</strong> 휴양 & 해양 액티비티</span>
+          </div>
+          <div class="flex items-center">
+            <i class="fa-solid fa-key w-6 text-[#00B4D8]"></i>
+            <span><strong>숙소:</strong> 알로나 비치 근처</span>
+          </div>
+          <div class="flex items-start">
+            <i class="fa-solid fa-star w-6 text-[#00B4D8] mt-1"></i>
+            <div>
+              <strong class="block">핵심 포인트:</strong>
+              <ul class="list-disc list-inside ml-1">
+                <li>나팔링 정어리떼 투어</li>
+                <li>발리카삭 거북이 투어</li>
+                <li>육상 핵심 투어</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl shadow-lg">
+        <h3 class="text-2xl font-bold mb-4 text-[#0077B6]">예상 경비 분석</h3>
+        <p class="text-sm text-gray-500 mb-4">예상 경비 항목별 비중입니다. (항공/숙소 제외)</p>
+        <div class="chart-container h-64 md:h-72 w-full max-w-sm mx-auto">
+          <canvas id="budgetChart"></canvas>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl shadow-lg">
+        <h3 class="text-2xl font-bold mb-4 text-[#0077B6]">준비물 체크리스트</h3>
+        <ul class="space-y-3">
+          <li class="flex items-center"><span class="mr-3 text-lg text-green-500">✅</span> <span>여권, 항공권, 현금(달러/페소)</span></li>
+          <li class="flex items-center"><span class="mr-3 text-lg text-green-500">✅</span> <span>수영복, 래시가드, 아쿠아슈즈</span></li>
+          <li class="flex items-center"><span class="mr-3 text-lg text-green-500">✅</span> <span>선크림, 선글라스, 모자</span></li>
+          <li class="flex items-center"><span class="mr-3 text-lg text-green-500">✅</span> <span>방수팩, 보조배터리, 멀티어댑터</span></li>
+          <li class="flex items-center"><span class="mr-3 text-lg text-green-500">✅</span> <span>여름옷, 가벼운 외투</span></li>
+          <li class="flex items-center"><span class="mr-3 text-lg text-green-500">✅</span> <span>상비약 (소화제, 진통제 등)</span></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="bg-white mt-12 py-6">
+  <div class="container mx-auto text-center text-gray-500">
+    <p>아내와 함께하는 가장 행복한 보홀 여행이 되기를 바랍니다!</p>
+    <p class="text-sm mt-1">Bon Voyage! ✈️</p>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const budgetCtx = document.getElementById('budgetChart').getContext('2d');
+    const budgetChart = new Chart(budgetCtx, {
+      type: 'doughnut',
+      data: {
+        labels: ['투어&액티비티', '식비', '교통비', '마사지', '쇼핑&기타'],
+        datasets: [{
+          label: '경비 비중',
+          data: [40, 30, 10, 10, 10],
+          backgroundColor: [
+            '#00B4D8',
+            '#90E0EF',
+            '#70C1B3',
+            '#F25F5C',
+            '#FFE082'
+          ],
+          borderColor: '#FEFBF6',
+          borderWidth: 4,
+          hoverOffset: 8
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        cutout: '60%',
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: {
+              padding: 15,
+              font: {
+                size: 12
+              }
+            }
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                let label = context.label || '';
+                if (label) {
+                  label += ': ';
+                }
+                if (context.parsed !== null) {
+                  label += context.parsed + '%';
+                }
+                return label;
+              }
+            }
+          }
+        }
+      }
+    });
+
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('#navbar a');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').substring(1) === entry.target.id) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    }, { rootMargin: "-50% 0px -50% 0px" });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+
+    navLinks.forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  });
+</script>
+</body>
+</html>
